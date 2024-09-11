@@ -66,7 +66,7 @@ public class MainActivity extends AppCompatActivity {
 
             }
             else if(result=="no") {
-                break
+                break;
             }
         }
 
