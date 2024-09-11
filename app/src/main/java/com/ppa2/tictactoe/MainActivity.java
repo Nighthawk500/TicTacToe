@@ -9,6 +9,10 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 public class MainActivity extends AppCompatActivity {
+    //  Joseph Marvin & Andrew Weinert
+    //  ISYS 221 - VL1
+    //  Pair Programming Assignment #2 - Tic, Tac, Toe
+    //  Due: 9/29/2024
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
