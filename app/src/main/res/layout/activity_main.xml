@@ -8,17 +8,88 @@
     android:padding="10dp">
 
     <GridLayout
+        android:id="@+id/gameGridLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:rowCount="5"
         android:columnCount="5"
+        android:padding="10dp"
         tools:ignore="ExtraText">
         <Button
-            android:"@+id/button_0_0"
+            android:id="@+id/button_0_0"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
         <View
-            android:layout_width=""
+            android:layout_width="2dp"
+            android:layout_height="wrap_content"
+            android:background="#000000"/>
+        <Button
+            android:id="@+id/button_0_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <View
+            android:layout_width="2dp"
+            android:layout_height="wrap_content"
+            android:background="#000000"/>
+        <Button
+            android:id="@+id/button_0_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <!-- Horizontal line -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="#000000"
+            android:layout_row="1"
+            android:layout_columnSpan="5"/>
+        <!-- Second Row -->
+        <Button
+            android:id="@+id/button_1_0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <View
+            android:layout_width="2dp"
+            android:layout_height="wrap_content"
+            android:background="#000000"/>
+        <Button
+            android:id="@+id/button_1_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <View
+            android:layout_width="2dp"
+            android:layout_height="wrap_content"
+            android:background="#000000"/>
+        <Button
+            android:id="@+id/button_1_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <!-- Second horizontal line-->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="#000000"
+            android:layout_row="3"
+            android:layout_columnSpan="5"/>
+        <Button
+            android:id="@+id/button_2_0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+        <View
+            android:layout_width="2dp"
+            android:layout_height="wrap_content"
+            android:background="#000000"/>
+        <Button
+            android:id="@+id/button_2_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+        <View
+            android:layout_width="2dp"
+            android:layout_height="wrap_content"
+            android:background="#000000"/>
+        <Button
+            android:id="@+id/button_2_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
 
     </GridLayout>
 
