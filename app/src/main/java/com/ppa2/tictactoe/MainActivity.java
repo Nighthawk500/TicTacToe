@@ -23,6 +23,9 @@ public class MainActivity extends AppCompatActivity {
     private GridLayout mGameGrid;
     private char mGameX;
     private char mGameY;
+    //Retrieve grid size from model
+    final int gridSize = TicTacToeGame.GRID_SIZE;
+
 
     public String turn = "X";
 
@@ -34,23 +37,37 @@ public class MainActivity extends AppCompatActivity {
 
         tictactoegrid = findViewById(R.id.game_grid);
 
+        //Create listener for buttons
         for (int buttonIndex = 0; buttonIndex < tictactoegrid.getChildCount(); buttonIndex++) {
             Button gridButton = (Button) tictactoegrid.getChildAt(buttonIndex);
             gridButton.setOnClickListener(this::onGridButtonClick);
         }
 
         public void Winner(String turn){
-            AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
-            builder.setMessage(R.string.dialog_message)
-                   .setTitle(R.string.dialog_title);
-                   AlertDialog dialog = builder.create();
-        }
-
-        public void Quit(View view){
 
         }
 
-        final int gridSize = TicTacToeGame.GRID_SIZE;
+        public void onQuitClick(View view){
+
+            AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity());
+            builder.setMessage("Are you sure?");
+            builder.setTitle("Quit");
+            builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int id) {
+
+                        }
+                    });
+            builder.setNegativeButton("No", new DialogInterface.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int id) {
+
+                            dialog.dismiss();
+                        }
+                    });
+
+            AlertDialog dialog = builder.create();
+            dialog.show();
+        }
+
         //Update the appropriate grid cell
         private void updateGrid() {
             for (int i = 0; i < gridSize; i++) {
