@@ -1,16 +1,8 @@
 package com.ppa2.tictactoe;
 
-import android.os.Bundle;
-
-import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 
-import java.util.Random;
-
-public class GameActivity extends AppCompatActivity {
+public class TicTacToeGame extends AppCompatActivity {
 
     public static final int GRID_SIZE = 3;
 
@@ -30,4 +22,6 @@ public class GameActivity extends AppCompatActivity {
         }
     }
 
+    //Check for a win
+    public boolean gameWinner
 }
