@@ -37,6 +37,16 @@ public class TicTacToeGame extends AppCompatActivity {
         }
     }
 
+    //Sets the grid cell to an X or Y if empty, then changes turns
+    public void setCell(int row, int col) {
+        if (mGameGrid[row][col] == ' ') {
+            //Sets the grid cell
+            mGameGrid[row][col] = currentPlayer;
+            //Change the player to X or O
+            changePlayer();
+        }
+    }
+
     //Check for a win
     public boolean gameWinnerCheck() {
         //Check for win by rows
