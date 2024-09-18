@@ -19,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-/*
+
 
         public void Winner(String color){
             System.out.println(color + "Wins!");
@@ -70,7 +70,7 @@ public class MainActivity extends AppCompatActivity {
                 break;
             }
         }
-*/
+
 
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
