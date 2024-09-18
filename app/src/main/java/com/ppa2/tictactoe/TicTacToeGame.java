@@ -8,6 +8,16 @@ public class TicTacToeGame extends AppCompatActivity {
 
     private final char[][] mGameGrid;
 
+    private char currentPlayer = 'X';
+
+    public void changePlayer(){
+        if (currentPlayer == 'X'){
+            currentPlayer = 'Y';
+        } else {
+            currentPlayer = 'X';
+        }
+    }
+
     public TicTacToeGame() {
         mGameGrid = new char[GRID_SIZE][GRID_SIZE];
     }
@@ -23,5 +33,28 @@ public class TicTacToeGame extends AppCompatActivity {
     }
 
     //Check for a win
-    public boolean gameWinner
+    public char gameWinner() {
+        // Check rows
+        for (int i = 0; i < GRID_SIZE; i++) {
+            if (mGameGrid[i][0] == currentPlayer && mGameGrid[i][1] == currentPlayer && mGameGrid[i][2] == currentPlayer) {
+                return true;
+            }
+        }
+
+        // Check columns win
+        for (int i = 0; i < GRID_SIZE; i++) {
+            if (mGameGrid[0][i] == currentPlayer && mGameGrid[1][i] == currentPlayer && mGameGrid[2][i] == currentPlayer) {
+                return true;
+            }
+        }
+
+        // Check diagonals
+        if (mGameGrid[0][0] == currentPlayer && mGameGrid[1][1] == currentPlayer && mGameGrid[2][2] == currentPlayer) {
+            return true;
+        }
+
+        if (mGameGrid[0][2] == currentPlayer && mGameGrid[1][1] == currentPlayer && mGameGrid[2][0] == currentPlayer) {
+            return true;
+        }
+    }
 }
