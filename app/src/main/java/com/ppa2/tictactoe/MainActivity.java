@@ -1,7 +1,9 @@
 package com.ppa2.tictactoe;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.GridLayout;
 
 import androidx.activity.EdgeToEdge;
@@ -20,49 +22,24 @@ public class MainActivity extends AppCompatActivity {
     private char mGameX;
     private char mGameY;
 
+    public String turn;
 
+    private GridLayout tictactoegrid;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+        tictactoegrid = findViewById(R.id.game_grid);
 
-
-        public void Winner(String color){
-            System.out.println(color + "Wins!");
-
+        for (int buttonIndex = 0; buttonIndex < tictactoegrid.getChildCount(); buttonIndex++) {
+            Button gridButton = (Button) tictactoegrid.getChildAt(buttonIndex);
+            gridButton.setOnClickListener(this::onGridButtonClick);
         }
 
-        public void NextTurn(View view){
-            //if three buttons share the same symbol a winner is declared
-            // assume this is the position of buttons:
-            // 0  1  2
-            // 3  4  5
-            // 6  7  8
-            if button 0,1,2 are the same
-                    else if button 0,1,2 are the same
-                    else if button 3,4,5 are the same
-                    else if button 6,7,8 are the same
-                    else if button 0,3,6 are the same
-                    else if button 1,4,7 are the same
-                    else if button 2,5,8 are the same
-                    else if button 0,4,8 are the same
-                    else if button 2,4,6 are the same
-            //else if three buttons do not share the same symbol, the next player gets a turn
-            if(turn == "playerBlue") {
-                turn = "playerRed"";
-            }
-            else if(turn == "playerRed") {
-                turn = "playerBlue"
-            }
-            // if all rows are filled, the game is a tie
-        }
+        public void Winner(String turn){
+            System.out.println(turn + " Wins!");
 
-        public void NewGame(View view){
-            //all symbols are made blank
-            for (int i = 0; i < 9; i++) {
-                button(i) = "clear";
-            }
         }
 
         public void Quit(View view){
