@@ -2,6 +2,8 @@
     <string name="app_name">Tic Tac Toe</string>
     <string name="new_game">New Game</string>
     <string name="quit">Quit</string>
+    <string name="button_x">X</string>
+    <string name="button_o">O</string>
 
 
 </resources>

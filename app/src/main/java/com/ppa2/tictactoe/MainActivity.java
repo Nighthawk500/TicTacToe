@@ -2,6 +2,7 @@ package com.ppa2.tictactoe;
 
 import android.os.Bundle;
 import android.view.View;
+import android.widget.GridLayout;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -14,6 +15,12 @@ public class MainActivity extends AppCompatActivity {
     //  ISYS 221 - VL1
     //  Pair Programming Assignment #2 - Tic, Tac, Toe
     //  Due: 9/29/2024
+
+    private GridLayout mGameGrid;
+    private char mGameX;
+    private char mGameY;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
