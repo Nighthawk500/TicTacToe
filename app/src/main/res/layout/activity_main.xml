@@ -18,7 +18,9 @@
         android:layout_margin="25dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" >
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@color/black">
+
 
         <Button style="@style/GridButton" />
         <Button style="@style/GridButton" />
