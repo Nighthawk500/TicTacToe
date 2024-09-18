@@ -29,7 +29,7 @@ public class TicTacToeGame extends AppCompatActivity {
 
     //Initialize grid with blank (space) characters
     public void newGame() {
-        //
+        //Loop through each cell to set each to a blank
         for (int i = 0; i <GRID_SIZE; i++){
             for (int j = 0; j < GRID_SIZE; j++){
                 mGameGrid[i][j] = ' ';
@@ -46,6 +46,8 @@ public class TicTacToeGame extends AppCompatActivity {
             changePlayer();
         }
     }
+
+    //
 
     //Check for a win
     public boolean gameWinnerCheck() {
@@ -67,10 +69,10 @@ public class TicTacToeGame extends AppCompatActivity {
         if (mGameGrid[0][0] == currentPlayer && mGameGrid[1][1] == currentPlayer && mGameGrid[2][2] == currentPlayer) {
             return true;
         }
-
         if (mGameGrid[0][2] == currentPlayer && mGameGrid[1][1] == currentPlayer && mGameGrid[2][0] == currentPlayer) {
             return true;
         }
+        //If no winner
         return false;
     }
 
