@@ -8,18 +8,26 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import java.util.Random;
+
 public class GameActivity extends AppCompatActivity {
 
-    public String getState() {
-        StringBuilder boardString = new StringBuilder();
-        for (int row = 0; row < GRID_SIZE; row++) {
-            for (int col = 0; col < GRID_SIZE; col++) {
-                char value = mGameGrid[row][col] ? 'X' : 'O';
-                boardString.append(value);
-            }
-        }
-    return boardString.toString();
+    public static final int GRID_SIZE = 3;
+
+    private final char[][] mGameGrid;
+
+    public TicTacToeGame() {
+        mGameGrid = new char[GRID_SIZE][GRID_SIZE];
     }
 
+    //Initialize grid with blank (space) characters
+    public void newGame() {
+        //
+        for (int i = 0; i <GRID_SIZE; i++){
+            for (int j = 0; j < GRID_SIZE; j++){
+                mGameGrid[i][j] = ' ';
+            }
+        }
+    }
 
 }
