@@ -11,6 +11,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+import androidx.appcompat.app.AlertDialog;
+import android.content.DialogInterface;
 
 public class MainActivity extends AppCompatActivity {
     //  Joseph Marvin & Andrew Weinert
@@ -22,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
     private char mGameX;
     private char mGameY;
 
-    public String turn;
+    public String turn = "X";
 
     private GridLayout tictactoegrid;
 
@@ -38,23 +40,30 @@ public class MainActivity extends AppCompatActivity {
         }
 
         public void Winner(String turn){
-            System.out.println(turn + " Wins!");
-
+            AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+            builder.setMessage(R.string.dialog_message)
+                   .setTitle(R.string.dialog_title);
+                   AlertDialog dialog = builder.create();
         }
 
         public void Quit(View view){
-            //a popup will appear
-            print "do you want to quit?", options yes/no
-            //if yes is selected the app will close
-            //if no is selected the popup closes and nothing is changed
-            if(result=="yes") {
 
-            }
-            else if(result=="no") {
-                break;
-            }
         }
 
+        final int gridSize = TicTacToeGame.GRID_SIZE;
+        //Update the appropriate grid cell
+        private void updateGrid() {
+            for (int i = 0; i < gridSize; i++) {
+                for (int j = 0; j < gridSize; j++) {
+                    //Retrieves the cell button from the grid
+                    Button button = (Button) mGameGrid.getChildAt(i * gridSize + j);
+                    //Set and convert the character of the appropriate cell to a String
+                    button.setText(String.valueOf(mGameGrid[i][j]));
+                    //Enables button if the space is blank
+                    button.setEnabled(mGameGrid[i][j] == ' ');
+                }
+            }
+        }
 
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
