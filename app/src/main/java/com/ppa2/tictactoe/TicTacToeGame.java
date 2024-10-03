@@ -11,7 +11,7 @@ public class TicTacToeGame {
     // Keep track of X or O
     private char currentPlayer = 'X';
 
-    public TicTacToeGame() {
+    public TicTacToeGame() { // initializes the grid and starts a new game
         mGameGrid = new char[GRID_SIZE][GRID_SIZE];
         newGame();
     }
@@ -23,7 +23,7 @@ public class TicTacToeGame {
                 mGameGrid[i][j] = ' ';
             }
         }
-        currentPlayer = 'X';
+        currentPlayer = 'X'; // Player X starts
     }
 
     // Set a cell and change the player
@@ -66,10 +66,10 @@ public class TicTacToeGame {
         for (int i = 0; i < GRID_SIZE; i++) {
             for (int j = 0; j < GRID_SIZE; j++) {
                 if (mGameGrid[i][j] == ' ') {
-                    return false;
+                    return false; //game is not a draw
                 }
             }
         }
-        return true;
+        return true; //game is a draw
     }
 }

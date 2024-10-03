@@ -8,6 +8,7 @@
     android:layout_height="match_parent"
     tools:context="com.ppa2.tictactoe.MainActivity">
 
+    <!-- The grid that holds buttons -->
     <GridLayout
         android:id="@+id/game_grid"
         android:layout_width="wrap_content"
@@ -21,6 +22,7 @@
         app:layout_constraintTop_toTopOf="parent"
         android:background="@color/black">
 
+        <!-- Nine buttons -->
         <Button style="@style/GridButton" />
         <Button style="@style/GridButton" />
         <Button style="@style/GridButton" />
@@ -32,23 +34,38 @@
         <Button style="@style/GridButton" />
     </GridLayout>
 
-    <Button
-        android:id="@+id/new_game_button"
-        style="@style/GameOptionButton"
-        android:layout_marginTop="20dp"
-        android:text="@string/new_game"
-        android:onClick="onNewGameClick"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/game_grid" />
+    <!-- TextView that changes to indicate what player's turn it is -->
+    <TextView
+        android:id="@+id/turndisplay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="142dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="143dp"
+        android:scaleY="0.8"
+        android:text="X"
+        android:textColor="#000000"
+        android:textSize="160sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/playerturn" />
+ 
+    <!-- text view with the text "Player Turn:" -->
+    <TextView 
+        android:id="@+id/playerturn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="126dp"
+        android:layout_marginTop="70dp"
+        android:layout_marginEnd="127dp"
+        android:layout_marginBottom="-30dp"
+        android:text="Player Turn:"
+        android:textColor="#000000"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/turndisplay"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
-    <Button
-        android:id="@+id/quit_button"
-        style="@style/GameOptionButton"
-        android:text="@string/quit"
-        android:onClick="onQuitClick"
-        app:layout_constraintLeft_toLeftOf="@id/new_game_button"
-        app:layout_constraintRight_toRightOf="@id/new_game_button"
-        app:layout_constraintTop_toBottomOf="@id/new_game_button" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
