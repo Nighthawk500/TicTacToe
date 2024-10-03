@@ -12,7 +12,7 @@ public class MainActivity extends AppCompatActivity {
     //  Joseph Marvin & Andrew Weinert
     //  ISYS 221 - VL1
     //  Pair Programming Assignment #2 - Tic, Tac, Toe
-    //  Due: 9/29/2024
+    //  Due: 10/6/2024
 
     private GridLayout tictactoegrid;
     private TicTacToeGame mGame;
