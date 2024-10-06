@@ -91,8 +91,9 @@ public class MainActivity extends AppCompatActivity {
             Button gridButton = (Button) tictactoegrid.getChildAt(buttonIndex);
             gridButton.setText("");
             gridButton.setEnabled(true);
-            playerIndicator.setText(String.valueOf(mGame.getCurrentPlayer() == 'X' ? 'O' : 'X'));
         }
+        playerIndicator.setText(String.valueOf(mGame.getCurrentPlayer() == 'X' ? 'O' : 'X'));
+
     }
 
     // Handle quit button click
