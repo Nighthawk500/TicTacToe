@@ -55,7 +55,7 @@ public class MainActivity extends AppCompatActivity {
         button.setEnabled(false);
 
         //set the textview that displays the current turn
-        playerIndicator.setText(String.valueOf(mGame.getCurrentPlayer()));
+        playerIndicator.setText(String.valueOf(mGame.getCurrentPlayer() == 'X' ? 'O' : 'X'));
 
 
         // Check if there is a winner or a draw
